@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /*starts up the app */
@@ -21,7 +22,7 @@ import java.util.Objects;
 public class App {
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("App.fxml")));
         stage.setTitle("Application Assignment");
@@ -33,5 +34,7 @@ public class App {
     public static void main(String[] args) {
         launch(args);
     }
+
+
 
 }
