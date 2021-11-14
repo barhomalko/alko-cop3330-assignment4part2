@@ -3,8 +3,6 @@
  *  Copyright 2021 barhom alko
  */
 
-
-
 package ucf.assignments;
 
 import javafx.application.Application;
@@ -16,7 +14,7 @@ import javafx.stage.Stage;
 import java.io.Serializable;
 import java.util.Objects;
 
-/*starts up the app */
+/*runs app*/
 
 
 public class App {

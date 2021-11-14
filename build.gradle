@@ -1,38 +1,36 @@
 plugins {
+
+    id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-}
-
-javafx {
-    version = "16"
-    modules = [ 'javafx.controls', 'javafx.fxml' ]
-}
-
-mainClassName = 'org.openjfx.MainApp'
-group 'org.example'
 version '1.0-SNAPSHOT'
 
 repositories {
+
     mavenCentral()
 }
 
+test {
 
-
-
-
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    useJUnitPlatform()
 }
 
+dependencies {
 
-test {
-    useJUnitPlatform()
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+    implementation 'org.openjfx:javafx:16'
+
+}
+
+javafx {
+
+    version = '16'
+    modules = ['javafx.base', 'javafx.graphics', 'javafx.controls', 'javafx.fxml']
+
+}
+application {
+    mainClass = 'ucf.assignments.App'
 }
