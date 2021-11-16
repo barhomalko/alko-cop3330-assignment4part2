@@ -20,18 +20,18 @@ public class File {
     public String filePath;
     public String fileName;
     public File() {
-        // initializes the file with a default name
+        //sets default name
         this.fileName = "new";
     }
 
 
     public String getFileName() {
-        // return string of file name
+        //return string of file name
         return fileName;
     }
 
     public void setFileName(File file) {
-        // set file name
+        //sets file name
         this.fileName = file.getName();
     }
 
@@ -67,7 +67,10 @@ public class File {
         }
     }
 
-    public Object File(Path file) {
+    private Path tofilePath() {
+    }
+
+    public Object readFile(Path file) {
         try {
             ObjectInputStream inputStream = new ObjectInputStream(Files.newInputStream(file));
             return inputStream.readObject();
@@ -76,6 +79,3 @@ public class File {
         }
         return null;
     }
-
-
-}

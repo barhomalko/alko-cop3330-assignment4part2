@@ -5,16 +5,14 @@
 
 package ucf.assignments;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.Serializable;
 import java.util.Objects;
+import static javafx.application.Application.launch;
 
-/*runs app*/
+//runs app
 
 
 public class App {
@@ -31,8 +29,6 @@ public class App {
 
     public static void main(String[] args) {
         launch(args);
-    }
-
 
 
 }

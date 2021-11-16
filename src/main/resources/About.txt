@@ -1,0 +1,20 @@
+FILE:
+
+    New List: Launches a new blank Todo app
+    Load File: Loads file in the app
+    Save File: Saves
+    Quit: Closes Application
+
+
+EDIT:
+
+    New Todo: Creates new Todo row based on bottom bar values.
+    Delete Todo: Deletes the selected Todo row.
+    Delete List: Clears out all the rows with no check.
+
+
+VIEW:
+
+    All: Shows all
+    Completed: Show only completed items.
+    Incomplete: Show only incomplete items.

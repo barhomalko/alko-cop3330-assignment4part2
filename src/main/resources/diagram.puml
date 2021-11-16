@@ -1,0 +1,97 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class JavaFX.App {
+
+    -start()
+    -main()
+}
+
+class JavaFX.About {
+    +getText()
+    +displayPopup()
+}
+
+class Columns {
+    +setDateColumn()
+    +setTextColumn()
+    +setBoolColumn()
+}
+
+class JavaFX.Controller {
+
+
+	-todoField;
+	-dueDatePicker;
+	-tableViewContainer;
+	-data;
+	-dataTemp;
+	-dueDateColumn;
+	-todoFieldColumn;
+	-boolColumn;
+	-fileChooser;
+	-File;
+
+    +initialize()
+    +clickAddList()
+    +clickDeleteList()
+    +clickShowCompleted()
+    +clickHideCompleted()
+    +clickPlus()
+    +clickMinus()
+    +menuLoadFile()
+    +menuLoadList()
+    +menuSaveFile()
+    +menuSaveList()
+    +menuQuit()
+}
+
+class File {
+
+    -fileName
+    -filePath
+    -defaultPath
+
+    +setName()
+    +getName()
+
+    +setFilePath()
+    +getFilePath()
+
+    +writeFile()
+    +readFile()
+}
+
+class Todo {
+
+    -String dueDate
+    -String todoText
+    -Boolean bool
+
+    +setTodoText()
+    +getTodoText()
+
+    +setDueDate()
+    +getDueDate()
+
+    +setBool()
+    +getBool()
+
+}
+
+
+
+JavaFX.App => JavaFX.Controller
+
+JavaFX.Controller => File
+JavaFX.Controller = Columns
+JavaFX.Controller ==> JavaFX.About
+Columns <==> Todo
+File <=> Todo
+File <=> Columns
+
+
+
+
+
+@enduml
